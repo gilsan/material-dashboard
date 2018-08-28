@@ -1,0 +1,52 @@
+<h2>
+  탭 판넬
+</h2>
+
+
+<div class="container">
+    <ng-template #headerButtons>
+        <button  (click)="tabPannel.selectedTab(loginTab)">로그인</button>
+        <button  (click)="tabPannel.selectedTab(signupTab)">등록</button>
+    </ng-template>
+
+  <app-au-tap-panel #tabPannel>
+     <app-au-tap title="로그인"  [selected]="false"  #loginTab>
+      <form>
+        <div class="form-field">
+            <label>이메일:</label><input>
+        </div>
+        <div class="form-field">
+            <label>암호:</label><input>
+        </div>
+    </form>
+     </app-au-tap>
+     <app-au-tap  title="등록" [selected]="false"  #signupTab>
+      <form>
+        <div class="form-field">
+            <label>이메일:</label><input>
+        </div>
+        <div class="form-field">
+            <label>암호:</label><input>
+        </div>
+        <div class="form-field">
+            <label>암호 확인:</label><input>
+        </div>
+    </form>
+    </app-au-tap>
+    <app-au-tap  title="연락처" [selected]="false">
+      <form>
+        <div class="form-field">
+            <label>이메일:</label><input>
+        </div>
+        <div class="form-field">
+            <label>메세지:</label>
+            <textarea></textarea>
+        </div>
+    </form>
+    </app-au-tap>
+  </app-au-tap-panel>
+
+
+
+
+</div>

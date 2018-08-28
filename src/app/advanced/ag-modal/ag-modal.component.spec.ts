@@ -1,22 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HomeComponent } from './home.component';
-import { BoxModule } from 'angular-admin-lte';
+import { AgModalComponent } from './ag-modal.component';
 
-describe('HomeComponent', () => {
-  let component: HomeComponent;
-  let fixture: ComponentFixture<HomeComponent>;
+describe('AgModalComponent', () => {
+  let component: AgModalComponent;
+  let fixture: ComponentFixture<AgModalComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [BoxModule],
-      declarations: [HomeComponent]
+      declarations: [ AgModalComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HomeComponent);
+    fixture = TestBed.createComponent(AgModalComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

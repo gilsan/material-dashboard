@@ -1,6 +1,35 @@
 <div class="navbar-custom-menu">
   <ul class="nav navbar-nav">
     <!-- Messages: style can be found in dropdown.less -->
+
+
+    <li mk-dropdown type="list" [isWrapper]="false" class="user user-menu">
+      <mk-dropdown-toggle>
+        <a #toggleElement>
+          <img src="assets/img/user2-160x160.jpg" class="user-image" alt="User Image">
+          <span class="hidden-xs">웹관리자</span>
+        </a>
+      </mk-dropdown-toggle>
+      <mk-dropdown-menu>
+
+        <li class="user-footer">
+          <div class="pull-left">
+            <a href="#" class="btn btn-default btn-flat">Profile</a>
+          </div>
+          <div class="pull-right">
+            <a href="#" class="btn btn-default btn-flat">로그아웃</a>
+          </div>
+        </li>
+      </mk-dropdown-menu>
+    </li>
+  </ul>
+</div>
+
+
+<!--
+<div class="navbar-custom-menu">
+  <ul class="nav navbar-nav">
+
     <li mk-dropdown type="list" [isWrapper]="false" class="messages-menu">
       <mk-dropdown-toggle>
         <a #toggleElement>
@@ -233,3 +262,5 @@
     </li>
   </ul>
 </div>
+
+-->

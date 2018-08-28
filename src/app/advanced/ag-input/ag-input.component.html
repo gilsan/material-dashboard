@@ -1,0 +1,70 @@
+
+<mat-card>
+  <mat-card-content>
+      <div class="container">
+          <h1>Font Awesome Input 사용예</h1>
+            <div class="form">
+
+                <div class="form-row">
+                   <label>보통 Input: </label>
+                   <input class="focus-input normal-input" type="email" name="email">
+                </div>
+
+               <div class="form-row">
+                   <label>Email: </label>
+                   <app-au-fa-input icon="envelope">
+                      <input class="focus-input  normal-input"   appInputRef type="email" placeholder="E-mail">
+                   </app-au-fa-input>
+                </div>
+
+                <div class="form-row">
+                 <label>Password: </label>
+                 <app-au-fa-input icon="lock">
+                    <input class="focus-input normal-input"    appInputRef type="password" placeholder="Password">
+                 </app-au-fa-input>
+              </div>
+
+              <div class="form-row">
+               <label>Stripe: </label>
+               <app-au-fa-input icon="cc-stripe">
+                  <input class="normal-input" type="email" placeholder="Stripe">
+               </app-au-fa-input>
+            </div>
+
+            <div class="form-row">
+             <label>PayPal: </label>
+             <app-au-fa-input icon="paypal">
+                <input class="normal-input" type="email" placeholder="PayPal">
+            </app-au-fa-input>
+          </div>
+            </div>
+            <h1>Material Design</h1>
+
+            <div class="form-row">
+              <label>Lock:</label>
+              <app-au-md-input icon="search">
+                  <input type="email" name="email" placeholder="E-mail">
+              </app-au-md-input>
+            </div>
+
+            <div class="form-row">
+              <label>Id Number:</label>
+              <app-au-md-input icon="flag">
+                  <input type="email" name="email" placeholder="E-mail">
+              </app-au-md-input>
+            </div>
+
+            <div class="form-row">
+              <label>Recepit Number:</label>
+              <app-au-md-input icon="add_box">
+                  <input type="email" name="email" placeholder="E-mail">
+              </app-au-md-input>
+            </div>
+
+         </div>
+  </mat-card-content>
+</mat-card>
+
+
+
+

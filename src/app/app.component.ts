@@ -15,6 +15,7 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.layoutService.isCustomLayout.subscribe((value: boolean) => {
       this.customLayout = value;
+      console.log(this.customLayout);
     });
   }
 }

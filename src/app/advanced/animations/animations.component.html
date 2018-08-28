@@ -1,0 +1,77 @@
+<mat-card>
+   <mat-card-content>
+     <div class="container">
+       <h1>애니메이션</h1>
+
+       <ng-template #modalBody>
+           <ng-template #modalButtons>
+              <div class="modal-buttons">
+                <button (click)="tabPanel.selectTab(stripeTab)">Stripe</button>
+                <button (click)="tabPanel.selectTab(paypalTab)">페이팔</button>
+              </div>
+           </ng-template>
+
+
+       <app-au-tap-panel  #tabPanel>
+          <app-au-tap title="Strip" #stripeTab>
+             <div class="payment-form">
+                <label>이메일:</label>
+                <app-au-fa-input class="form-input" icon="envelope">
+                   <input appInputRef type="email" placeholder="Email">
+                </app-au-fa-input>
+
+                <label>이름:</label>
+                <input class="form-input" placeholder="이름">
+
+                <label>카드 번호:</label>
+                <app-au-fa-input icon="cc-stripe" class="form-input">
+                   <input appInputRef placeholder="카드번호" appAuMask="9999 9999 9999 9999">
+                </app-au-fa-input>
+
+                <label>카드날자:</label>
+                <input  placeholder="카드날자" appAuMask="19/9999" class="form-input">
+
+                <label>CVC:</label>
+                <input  placeholder="CVC" appAuMask="999" class="form-input">
+
+                <label>쿠폰코드:</label>
+                <input  placeholder="쿠폰코드(옵션)"   class="form-input">
+
+                <button class="modal-button">결재확인</button>
+
+             </div>
+          </app-au-tap>
+          <app-au-tap title="Paypal" #paypalTab>
+             <div class="payment-form">
+                 <label>쿠폰코드:</label>
+                 <input placeholder="쿠폰코드(옵션)" class="form-input">
+                 <button class="modal-button">결재확인</button>
+             </div>
+          </app-au-tap>
+       </app-au-tap-panel>
+      </ng-template>
+
+      <app-au-modal    *appAgModal="paymentModal" [body]="modalBody">
+
+      </app-au-modal>
+      <button #paymentModal>결재열기</button>
+
+     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   </mat-card-content>
+</mat-card>
